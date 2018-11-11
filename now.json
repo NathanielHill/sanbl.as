@@ -1,5 +1,14 @@
 {
-  "name": "sanbl.as",
+  "name": "sanblas",
   "alias": "sanbl.as",
-  "type": "static"
+  "version": 2,
+  "builds": [
+    { "src": "public/*", "use": "@now/static" },
+    { "src": "www/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "^/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "^/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "^/(.*)", "dest": "/www/$1" }
+  ]
 }

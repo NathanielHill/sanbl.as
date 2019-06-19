@@ -24,7 +24,7 @@
     "next-offline": "^3.2.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-twemoji": "^0.1.0",
+    "react-twemoji": "^0.2.0",
     "remark-emoji": "^2.0.2"
   },
   "devDependencies": {

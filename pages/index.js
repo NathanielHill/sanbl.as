@@ -1,7 +1,7 @@
-import { Avatar } from 'components'
-import Head from 'next/head'
-import Link from 'next/link'
-import React from 'react'
+import { Avatar } from 'components';
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
 
 export default () => (
   <div className='wrapper'>
@@ -11,12 +11,10 @@ export default () => (
       <meta name='Description' content='sanbl.as website' />
       <meta name='theme-color' content='#00162A' />
       <link rel='manifest' href='/manifest.json' />
-      <title>
-        Sanbl.as
-      </title>
+      <title>Sanbl.as</title>
     </Head>
     <header>
-      <Link passHref href='' className='home-link'>
+      <Link href=''>
         <a>Sanbl.as</a>
       </Link>
     </header>
@@ -24,9 +22,7 @@ export default () => (
       <Avatar />
     </main>
     <footer />
-    <noscript>
-      Turn on JavaScript please.
-    </noscript>
+    <noscript>Turn on JavaScript please.</noscript>
     <style jsx>{`
       .wrapper {
         align-items: center;
@@ -36,7 +32,7 @@ export default () => (
         min-height: 100vh;
       }
       header {
-        background-color: rgb(255,111,105);
+        background-color: rgb(255, 111, 105);
         min-height: 5em;
         width: 100vw;
         display: flex;
@@ -51,7 +47,7 @@ export default () => (
         text-align: center;
       }
       a {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         color: inherit;
         font-size: 1.5rem;
         outline: 0;
@@ -64,7 +60,8 @@ export default () => (
         margin: 0;
         padding: 0;
       }
-      html, body {
+      html,
+      body {
         width: 100vw;
         height: 100vh;
         overscroll-behavior: contain;
@@ -73,8 +70,8 @@ export default () => (
       }
       body {
         background-color: rgb(108, 143, 177);
-        background-image: linear-gradient(-25deg, rgb(255,204,92), rgb(255,238,173));
+        background-image: linear-gradient(-25deg, rgb(255, 204, 92), rgb(255, 238, 173));
       }
     `}</style>
   </div>
-)
+);

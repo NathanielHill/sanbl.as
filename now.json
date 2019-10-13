@@ -1,15 +1,23 @@
 {
   "name": "sanblas",
   "alias": "sanbl.as",
+  "scope": "sanblas",
   "version": 2,
-  "regions": [ "all" ],
-  "builds": [
-    { "src": "public/*", "use": "@now/static" },
-    { "src": "www/package.json", "use": "@now/static-build" }
-  ],
+  "regions": ["all"],
   "routes": [
-    { "src": "^/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "^/robots.txt", "dest": "/public/robots.txt" },
-    { "src": "^/(.*)", "dest": "/www/$1" }
+    {
+      "src": "^/service-worker.js$",
+      "dest": "/_next/static/service-worker.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
   ]
 }

@@ -1,20 +1,20 @@
-import { Avatar } from 'components';
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import { Avatar } from "components";
+import Head from "next/head";
+import Link from "next/link";
+import React from "react";
 
 export default () => (
-  <div className='wrapper'>
+  <div className="wrapper">
     <Head>
-      <meta charSet='utf-8' />
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <meta name='Description' content='sanbl.as website' />
-      <meta name='theme-color' content='#00162A' />
-      <link rel='manifest' href='/manifest.json' />
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="Description" content="sanbl.as website" />
+      <meta name="theme-color" content="#00162A" />
+      <link rel="manifest" href="/manifest.json" />
       <title>Sanbl.as</title>
     </Head>
     <header>
-      <Link href=''>
+      <Link href="">
         <a>Sanbl.as</a>
       </Link>
     </header>

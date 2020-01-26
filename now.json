@@ -1,7 +1,6 @@
 {
   "name": "sanblas",
   "alias": "sanbl.as",
-  "scope": "sanblas",
   "version": 2,
   "regions": ["all"],
   "routes": [

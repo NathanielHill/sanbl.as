@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 import './_app.css';
 
-export function reportWebVitals(metric) {
-  // console.log(metric);
-}
+// export function reportWebVitals(metric) {
+//   console.log(metric);
+// }
 
 const App = ({ Component, pageProps }) => (
   <>

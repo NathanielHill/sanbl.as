@@ -18,9 +18,9 @@ const App = ({ Component, pageProps }) => (
       <title>Sanbl.as</title>
     </Head>
     <div className='flex flex-col items-center justify-center min-h-screen'>
-      <header className='flex flex-row items-center w-screen'>
+      <header className='flex flex-row items-center w-screen h-20 bg-brand-red'>
         <Link href=''>
-          <a>Sanbl.as</a>
+          <a className='no-underline p-4 text-2xl outline-none'>Sanbl.as</a>
         </Link>
       </header>
       <main className='flex flex-1'>
@@ -29,21 +29,6 @@ const App = ({ Component, pageProps }) => (
       <footer />
       <noscript className='text-center'>Turn on JavaScript please.</noscript>
     </div>
-    <style jsx>{`
-      header {
-        background-color: rgb(255, 111, 105);
-        min-height: 5em;
-      }
-
-      a {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        color: inherit;
-        font-size: 1.5rem;
-        outline: 0;
-        padding: 1em;
-        text-decoration: none;
-      }
-    `}</style>
   </>
 );
 

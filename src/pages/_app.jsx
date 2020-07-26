@@ -17,41 +17,24 @@ const App = ({ Component, pageProps }) => (
       <link rel='manifest' href='/manifest.json' />
       <title>Sanbl.as</title>
     </Head>
-    <div className='wrapper'>
-      <header>
+    <div className='flex flex-col items-center justify-center min-h-screen'>
+      <header className='flex flex-row items-center w-screen'>
         <Link href=''>
           <a>Sanbl.as</a>
         </Link>
       </header>
-      <main>
+      <main className='flex flex-1'>
         <Component {...pageProps} />
       </main>
       <footer />
-      <noscript>Turn on JavaScript please.</noscript>
+      <noscript className='text-center'>Turn on JavaScript please.</noscript>
     </div>
     <style jsx>{`
-      .wrapper {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 100vh;
-      }
       header {
         background-color: rgb(255, 111, 105);
         min-height: 5em;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
       }
-      main {
-        display: flex;
-        flex: 1;
-      }
-      noscript {
-        text-align: center;
-      }
+
       a {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         color: inherit;

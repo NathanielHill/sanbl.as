@@ -6,13 +6,20 @@
   "license": "UNLICENSED",
   "keywords": [],
   "scripts": {
-    "dev": "next",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next",
     "build": "next build",
     "start": "next start",
     "snyk-protect": "snyk protect",
     "prepare": "yarn run snyk-protect",
     "test": "snyk test"
   },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "snyk": true,
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -39,10 +46,10 @@
     "snyk": "^1.324.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "healthier": "^4.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
-  },
-  "snyk": true
+  }
 }

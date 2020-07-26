@@ -1,34 +1,29 @@
-const path = require("path");
-const withOffline = require("next-offline");
+const withOffline = require('next-offline');
 
-module.exports = withOffline({
-  target: "serverless",
-  transformManifest: manifest => ["/"].concat(manifest), // add the homepage to the cache
+const nextConfig = {
   workboxOpts: {
-    swDest: "static/service-worker.js",
+    swDest: process.env.NEXT_EXPORT ? 'service-worker.js' : 'static/service-worker.js',
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
-        handler: "NetworkFirst",
+        handler: 'NetworkFirst',
         options: {
-          cacheName: "https-calls",
-          networkTimeoutSeconds: 15,
+          cacheName: 'offlineCache',
           expiration: {
-            maxEntries: 150,
-            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
-          },
-          cacheableResponse: {
-            statuses: [0, 200],
+            maxEntries: 200,
           },
         },
       },
     ],
   },
-  webpack: config => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      components: path.resolve(__dirname, "src/components"),
-    };
-    return config;
+  async rewrites() {
+    return [
+      {
+        source: '/service-worker.js',
+        destination: '/_next/static/service-worker.js',
+      },
+    ];
   },
-});
+};
+
+module.exports = withOffline(nextConfig);

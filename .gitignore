@@ -13,7 +13,7 @@ dist
 .DS_Store
 
 # Environment Variables
-.env*
+.env*.local
 
 # npm
 npm-debug.log*

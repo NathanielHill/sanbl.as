@@ -6,8 +6,9 @@
   "license": "UNLICENSED",
   "keywords": [],
   "scripts": {
-    "start": "next",
+    "dev": "next",
     "build": "next build",
+    "start": "next start",
     "snyk-protect": "snyk protect",
     "prepare": "yarn run snyk-protect",
     "test": "snyk test"

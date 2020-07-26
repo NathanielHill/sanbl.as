@@ -1,4 +1,7 @@
 const withOffline = require('next-offline');
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
 
 const nextConfig = {
   workboxOpts: {
@@ -28,4 +31,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withBundleAnalyzer(withOffline(nextConfig));
